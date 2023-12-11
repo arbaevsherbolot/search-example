@@ -1,6 +1,6 @@
-import * as express from 'express';
-import * as cors from 'cors';
-import * as cookieParser from 'cookie-parser';
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import type { Application } from 'express';
 import { searchEngine } from './lib/search/searchEngine';
 
