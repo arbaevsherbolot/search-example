@@ -307,7 +307,7 @@ May your code be elegant, your applications seamless, and your journey in Full-S
   },
   {
     content: `
-<<console.log('Hello World')>>
+<<console.log('Hello World')>> this is a example
     `,
   },
 ];
