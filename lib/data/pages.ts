@@ -305,4 +305,9 @@ As we stand on the brink of the future, let the coding horizon beckon. Whether y
 May your code be elegant, your applications seamless, and your journey in Full-Stack Development be ever-thrilling!
 `,
   },
+  {
+    content: `
+<<console.log('Hello World')>>
+    `,
+  },
 ];
