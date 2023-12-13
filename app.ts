@@ -53,10 +53,7 @@ app.get(
       const decodedQuery = decodeURIComponent(query as string);
       const pages = await searchEngine.search(decodedQuery);
       const countOfResult = count ? parseInt(count as string) : pages.length;
-      const result =
-        pages
-          .slice(0, countOfResult)
-          .map((page, index) => `${index + 1}. ${page.content}`) || pages;
+      const result = pages.slice(0, countOfResult);
 
       response.status(200).json({
         count: result.length,
