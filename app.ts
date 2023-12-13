@@ -13,7 +13,7 @@ const WINDOW_MS = 5 * 1000;
 
 app.use(
   cors({
-    origin: ['http://localhost:3000'],
+    origin: ['https://search-example-client.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   }),
 );
