@@ -8,7 +8,7 @@ const app: Application = express();
 const port = 9999;
 
 const requestCounts: Record<string, { count: number; lastReset: number }> = {};
-const MAX_REQUESTS = 3;
+const MAX_REQUESTS = 20;
 const WINDOW_MS = 5 * 1000;
 
 app.use(
