@@ -52,12 +52,15 @@ app.get(
       const { query, count } = request.query;
       const decodedQuery = decodeURIComponent(query as string);
       const pages = await searchEngine.search(decodedQuery);
-      const countOfResult = count ? parseInt(count as string) : pages.length;
-      const result = pages.slice(0, countOfResult);
+      const countOfResult = parseInt(count as string);
 
       response.status(200).json({
-        count: result.length,
-        result,
+        count: pages.length,
+        result: pages.map((page) => ({
+          ...page,
+          selected: countOfResult === page.id,
+          content: `${page.id}. ${page.content}`,
+        })),
       });
     } catch (error: any) {
       console.error(error);

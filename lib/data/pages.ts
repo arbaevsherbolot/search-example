@@ -1,9 +1,11 @@
 export interface SearchResult {
+  id: number;
   content: string;
 }
 
 export const pages: SearchResult[] = [
   {
+    id: 1,
     content: `
 **Introduction to Full-Stack Development**
 <br/>
@@ -43,6 +45,7 @@ Get ready to immerse yourself in the fascinating world of Full-Stack Development
   `,
   },
   {
+    id: 2,
     content: `
 **Deep Dive into Backend Technologies**
 <br/>
@@ -107,6 +110,7 @@ Get ready to elevate your backend expertise!
   `,
   },
   {
+    id: 3,
     content: `
 **Frontend Technologies and UI Frameworks**
 Crafting Experiences: Navigating Frontend Realms
@@ -157,6 +161,7 @@ Get ready to craft experiences that leave a lasting impression!
   `,
   },
   {
+    id: 4,
     content: `
 **Cloud Computing with AWS**
 Soaring to New Heights: Navigating the Cloud
@@ -207,6 +212,7 @@ Get ready to soar to new heights with AWS!
   `,
   },
   {
+    id: 5,
     content: `
 **AI Interaction in Development**
 Merging Realms: The Symphony of AI and Development
@@ -306,6 +312,7 @@ May your code be elegant, your applications seamless, and your journey in Full-S
 `,
   },
   {
+    id: 6,
     content: `
 <<console.log('Hello World')>> this is a example
     `,
