@@ -1,14 +1,20 @@
 import { SearchResult, pages } from '../data/pages';
 
 class SimpleSearchEngine {
-  async search(query: string): Promise<SearchResult[]> {
-    const results: SearchResult[] = [];
+  private cachedResults: Record<string, SearchResult[]> = {};
 
-    for (const page of pages) {
-      if (page.content.toLowerCase().includes(query.toLowerCase())) {
-        results.push(page);
-      }
+  async search(query: string): Promise<SearchResult[]> {
+    const normalizedQuery = query.toLowerCase();
+
+    if (this.cachedResults[normalizedQuery]) {
+      return this.cachedResults[normalizedQuery];
     }
+
+    const results = pages.filter((page) =>
+      new RegExp(normalizedQuery, 'i').test(page.content),
+    );
+
+    this.cachedResults[normalizedQuery] = results;
 
     return results;
   }
